@@ -1,21 +1,24 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="GPT-3 Writer" key="title"/>
-        <meta property="og:description" content="build with buildspace" key="description"/>
         <meta
-          property="og:image"
-          content="https://cdn.buildspace.so/courses/gpt3-writer/project-og.jpg"
+          property="og:title"
+          content="Linkedin Message Generator"
+          key="title"
         />
-        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta
+          property="og:description"
+          content="This tool uses GPT-3 to generate personalized LinkedIn messages. It is designed to help you quickly and easily craft professional, effective messages to your connections."
+          key="description"
+        />
       </Head>
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
