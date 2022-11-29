@@ -17,7 +17,6 @@ body {
     background-color: rgb(18, 18, 18);
     flex-flow: column nowrap;
     gap: 10px;
-    height: 100vh;
     overflow: auto;
     padding: 0px;
     position: relative;
@@ -71,9 +70,7 @@ body {
 
 .prompt-container {
     gap: 16px;
-    height: min-content;
     padding: 0px;
-    width: min-content;
 }
 
 .prompt-box {
@@ -131,7 +128,6 @@ textarea {
     gap: 12px;
     height: min-content;
     overflow: hidden;
-    padding: 0px;
     position: relative;
     width: 100%;
 }
