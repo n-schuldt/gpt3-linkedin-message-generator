@@ -86,7 +86,7 @@ function Footer() {
           </a>
         </div>
 
-        {/* <div>
+        <div>
           <form action="">
             <div className="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
               <div className="md:ml-auto md:mb-6">
@@ -132,14 +132,13 @@ function Footer() {
           </form>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-6 whitespace-pre-wrap">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            distinctio earum repellat quaerat voluptatibus placeat nam, commodi
-            optio pariatur est quia magnam eum harum corrupti dicta, aliquam
-            sequi voluptate quas.
+            Currently working on a Chrome extension to do this for you
+            automatically on any LinkedIn profile! <br /> If you want to have
+            early access to this. Sign up for this project's updates!
           </p>
-        </div> */}
+        </div>
 
         {/* <div className="grid lg:grid-cols-4 md:grid-cols-2">
           <div className="mb-6">
