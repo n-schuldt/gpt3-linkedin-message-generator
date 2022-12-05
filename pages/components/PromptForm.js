@@ -106,7 +106,7 @@ function PromptForm() {
               <Field
                 name="sender"
                 type="text"
-                placeholder="Nicolas, CS student living in Paris..."
+                placeholder="Nicolas, Full-Stack developer living in Paris..."
                 className="appearance-none block w-full bg-gray-800 text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700"
               />
               {errors.sender && touched.sender ? (
@@ -178,6 +178,10 @@ function PromptForm() {
           <div className="text-gray-200 bg-slate-900 px-10 py-5 align-center rounded-xl">
             <p className="whitespace-pre-wrap">{apiOutput.trim()}</p>
           </div>
+          <p class="text-gray-400 text-sm italic self-start">
+            Not what you were expecting? Try again and change the wording a bit!{" "}
+            <br /> The same imput can lead to very different outputs.
+          </p>
           <div className="self-end">
             <Copy copyText={apiOutput.trim()} />
           </div>

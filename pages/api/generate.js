@@ -5,9 +5,6 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix = `
-Write a LinkedIn message for a connection request asking for:
-`;
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(req.body.values);

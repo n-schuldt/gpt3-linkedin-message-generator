@@ -3,6 +3,27 @@ import buildspaceLogo from "../../assets/buildspace-logo.png";
 import Image from "next/image";
 
 function Footer() {
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {};
+    Array.from(e.currentTarget.elements).forEach((field) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+    console.log(formData);
+    const webhookURL =
+      "https://hooks.airtable.com/workflows/v1/genericWebhook/appHkcdnAUhdxcuj0/wflmKgG0fAPUIXNoz/wtrGt8VLbZv3fpG0l";
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+
   return (
     <footer className="text-center bg-gray-900 text-gray-300 flex flex-col justify-center">
       <div className=" flex flex-col justify-center px-6 pt-6">
@@ -87,16 +108,40 @@ function Footer() {
         </div>
 
         <div>
-          <form action="">
+          <form method="post" onSubmit={handleOnSubmit}>
             <div className="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
               <div className="md:ml-auto md:mb-6">
                 <p className="">
-                  <strong>Sign up for our newsletter</strong>
+                  <strong>Sign up for future updates:</strong>
                 </p>
               </div>
 
               <div className="md:mb-6">
                 <input
+                  name="email"
+                  type="text"
+                  className="
+                  mb-2
+                form-control
+                block
+                w-full
+                px-3
+                py-1.5
+                text-base
+                font-normal
+                text-gray-400
+                bg-gray-700 bg-clip-padding
+                border border-solid border-gray-300
+                rounded
+                transition
+                ease-in-out
+                m-0
+                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+              "
+                  placeholder="Email address"
+                />
+                <input
+                  name="name"
                   type="text"
                   className="
                 form-control
@@ -115,8 +160,7 @@ function Footer() {
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
               "
-                  id="exampleFormControlInput1"
-                  placeholder="Email address"
+                  placeholder="Name"
                 />
               </div>
 
@@ -134,7 +178,7 @@ function Footer() {
 
         <div className="mb-6 whitespace-pre-wrap">
           <p>
-            Currently working on a Chrome extension to do this for you
+            I'm currently working on a Chrome extension to do this for you
             automatically on any LinkedIn profile! <br /> If you want to have
             early access to this. Sign up for this project's updates!
           </p>
