@@ -3,6 +3,18 @@ import buildspaceLogo from "../../assets/buildspace-logo.png";
 import Image from "next/image";
 
 function Footer() {
+  const callMailgunEndpoint = async (values) => {
+    console.log("UI", JSON.stringify({ values }));
+    console.log("Calling Mailgun...");
+    const response = await fetch("/api/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ values }),
+    });
+    console.log(response);
+  };
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     const formData = {};
@@ -11,25 +23,7 @@ function Footer() {
       formData[field.name] = field.value;
     });
     console.log(formData);
-    const webhookURL =
-      "https://hooks.airtable.com/workflows/v1/genericWebhook/appHkcdnAUhdxcuj0/wflmKgG0fAPUIXNoz/wtrGt8VLbZv3fpG0l";
-    // request to webhook with no-cors
-    const response = await fetch(webhookURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-      mode: "no-cors",
-    })
-      .then((response) => {
-        // Handle the success
-        console.log(response);
-      })
-      .catch((error) => {
-        // Handle the error
-        console.error(error);
-      });
+    callMailgunEndpoint(formData);
   };
 
   return (
