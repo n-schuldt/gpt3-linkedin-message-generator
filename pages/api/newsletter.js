@@ -38,7 +38,11 @@ const sendMail = async (req, res) => {
          Thanks for signing up. We'll keep you posted on our progress.`,
       },
       function (error, body) {
-        console.log(body);
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(body);
+        }
       }
     );
   res.status(200).json({ output: "Mail sent" });
