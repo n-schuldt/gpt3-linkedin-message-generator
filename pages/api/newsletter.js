@@ -39,13 +39,14 @@ const sendMail = async (req, res) => {
       },
       function (error, body) {
         if (error) {
+          res.status(500).json({ output: "Mail not sent", error: error });
           console.log(error);
         } else {
+          res.status(200).json({ output: "Mail sent" });
           console.log(body);
         }
       }
     );
-  res.status(200).json({ output: "Mail sent" });
 
   // client.messages
   //   .create(DOMAIN, messageData)
