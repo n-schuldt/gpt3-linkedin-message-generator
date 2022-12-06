@@ -7,26 +7,22 @@ const mailgun = () => mg({ apiKey: api_key, domain: DOMAIN });
 
 const sendMail = async (req, res) => {
   const { email, name } = req.body.values;
-  //add user to mailgun list
-  // mailgun()
-  //   .lists("FinchAI")
-  //   .members()
-  //   .create(
-  //     {
-  //       subscribed: true,
-  //       address: `${email}`,
-  //       name: `${name}`,
-  //     },
-  //     function (err, data) {
-  //       if (err) {
-  //         console.log("Error: " + err);
-  //       } else {
-  //         console.log(data);
-  //       }
-  //     }
-  //   );
+  // add user to mailing list
+  mailgun()
+    .lists("hello@mg.aifinch.com")
+    .members()
+    .create(
+      { subscribed: true, address: email, name: name },
+      function (error, body) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(body);
+        }
+      }
+    );
 
-  //send mail to user
+  // send mail to user
   mailgun()
     .messages()
     .send(
@@ -47,21 +43,6 @@ const sendMail = async (req, res) => {
         }
       }
     );
-
-  // client.messages
-  //   .create(DOMAIN, messageData)
-  //   .then((res) => {
-  //     console.log(res);
-  //     res.status(200).json({ output: "Mail sent" });
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //     res.status(500).json({ output: "Mail not sent" });
-  //   });
-  // client.domains
-  //   .list()
-  //   .then((domains) => console.log(domains))
-  //   .catch((err) => console.log(err));
 };
 
 export default sendMail;
