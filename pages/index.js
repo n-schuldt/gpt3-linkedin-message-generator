@@ -1,12 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import Coffee from "./components/Coffee";
 import Footer from "./components/Footer";
 import PromptForm from "./components/PromptForm";
 
 const Home = () => {
   return (
     <>
+      <div className="absolute top-4 right-4 z-10">
+        <Coffee />
+      </div>
+
       <div className="root">
         <Head>
           <title>GPT-3 Writer</title>
