@@ -8,7 +8,7 @@ import PromptForm from "./components/PromptForm";
 const Home = () => {
   return (
     <>
-      <div className="absolute top-4 right-4 z-10">
+      <div className="absolute top-2 right-1 z-10">
         <Coffee />
       </div>
 
