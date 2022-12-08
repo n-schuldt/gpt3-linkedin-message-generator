@@ -4,6 +4,7 @@ import { useState } from "react";
 import Coffee from "./components/Coffee";
 import Footer from "./components/Footer";
 import PromptForm from "./components/PromptForm";
+import { Analytics } from "@vercel/analytics/react";
 
 const Home = () => {
   return (
@@ -40,6 +41,7 @@ const Home = () => {
         </section>
       </div>
       <Footer />
+      <Analytics />
     </>
   );
 };
