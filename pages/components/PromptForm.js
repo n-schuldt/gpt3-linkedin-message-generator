@@ -65,7 +65,7 @@ function PromptForm() {
             /> */}
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-5">
               <label
-                class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
+                class="block uppercase tracking-wide text-gray-600 dark:text-gray-400 text-xs font-bold mb-2"
                 for="grid-first-name"
               >
                 Message Language
@@ -74,7 +74,7 @@ function PromptForm() {
                 <Field
                   as="select"
                   name="language"
-                  className="appearance-none block w-full bg-gray-800 text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700"
+                  className="appearance-none block w-full border-2 border-gray-300 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 rounded py-3 px-4 mb-3 leading-tight"
                 >
                   <option value="English">English</option>
                   <option value="Spanish">Spanish</option>
@@ -82,7 +82,7 @@ function PromptForm() {
                 </Field>
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
-                    class="fill-gray-300 h-4 w-4"
+                    class="fill-gray-700 dark:fill-gray-300 h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
@@ -98,7 +98,7 @@ function PromptForm() {
             </div>
             <div class="w-full px-3 mb-6">
               <label
-                class="block uppercase tracking-wide text-gray-400 text-xs font-bold pb-2"
+                class="block uppercase tracking-wide text-gray-600 dark:text-gray-400 text-xs font-bold pb-2"
                 for="grid-first-name"
               >
                 I am...
@@ -107,7 +107,7 @@ function PromptForm() {
                 name="sender"
                 type="text"
                 placeholder="Nicolas, Full-Stack developer living in Paris..."
-                className="appearance-none block w-full bg-gray-800 text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700"
+                className="appearance-none block w-full focus:border-blue-500 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded py-3 px-4 mb-3 leading-tight"
               />
               {errors.sender && touched.sender ? (
                 <div className="text-blue-500 text-xs italic">
@@ -117,7 +117,7 @@ function PromptForm() {
             </div>
             <div class="w-full px-3 mb-6">
               <label
-                class="block uppercase tracking-wide text-gray-400 text-xs font-bold pb-2"
+                class="block uppercase tracking-wide text-gray-600 dark:text-gray-400 text-xs font-bold pb-2"
                 for="grid-first-name"
               >
                 I'm messaging...
@@ -126,7 +126,7 @@ function PromptForm() {
                 name="recipient"
                 type="text"
                 placeholder="Sundar Pichai, CEO of Google..."
-                className="appearance-none block w-full bg-gray-800 text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700"
+                className="appearance-none block w-full focus:border-blue-500 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded py-3 px-4 mb-3 leading-tight"
               />
               <div className="text-blue-500 text-xs italic">
                 {errors.recipient}
@@ -134,7 +134,7 @@ function PromptForm() {
             </div>
             <div class="w-full px-3 mb-6">
               <label
-                class="block uppercase tracking-wide text-gray-400 text-xs font-bold pb-2"
+                class="block uppercase tracking-wide text-gray-600 dark:text-gray-400 text-xs font-bold pb-2"
                 for="grid-first-name"
               >
                 I want to...
@@ -143,7 +143,7 @@ function PromptForm() {
                 name="other"
                 as="textarea"
                 placeholder="Connect, ask for a call..."
-                className="appearance-none block w-full bg-gray-800 text-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700"
+                className="appearance-none block w-full focus:border-blue-500 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded py-3 px-4 mb-3 leading-tight"
               />
               <div className="text-blue-500 text-xs italic">{errors.other}</div>
             </div>

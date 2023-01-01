@@ -14,7 +14,6 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(18, 18, 18);
     flex-flow: column nowrap;
     gap: 10px;
     overflow: auto;
@@ -43,7 +42,6 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: #FFF
 }
 
 .header-title {
@@ -65,7 +63,6 @@ body {
     font-size: 25px;
     font-style: normal;
     line-height: 1.4em;
-    color: rgba(255, 255, 255, 0.75);
 }
 
 .prompt-container {
