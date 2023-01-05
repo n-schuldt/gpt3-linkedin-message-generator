@@ -33,7 +33,7 @@ function Copy({ copyText }) {
     <div className="px-3 py-1">
       <button
         onClick={handleCopyClick}
-        className="bg-blue-600 rounded-full px-5 py-2 text-white hover:bg-blue-400"
+        className="bg-blue-500 rounded-full px-5 py-2 text-white hover:bg-blue-400"
       >
         <span>{isCopied ? "Copied!" : "Copy"}</span>
       </button>

@@ -152,8 +152,8 @@ function PromptForm() {
                 type="submit"
                 className={
                   isGenerating
-                    ? "generate-button loading bg-blue-600 hover:bg-blue-400"
-                    : "bg-blue-600 generate-button"
+                    ? "generate-button loading bg-blue-500 "
+                    : "bg-blue-500 hover:bg-blue-400 generate-button"
                 }
               >
                 <div className="generate ">
@@ -169,21 +169,23 @@ function PromptForm() {
         )}
       </Formik>
       {apiOutput && (
-        <div className="output pt-5 pb-20">
+        <div className="output pt-5 pb-20 p-3">
           <div className="output-header-container text-white font-bold uppercase text-3xl tracking-tighter underline decoration-blue-500 underline-offset-4">
-            <div className="output-header">
-              <h3>Output</h3>
+            <div className="output-header pb-3">
+              <h3 className="text-black dark:text-gray-200">Output</h3>
             </div>
           </div>
-          <div className="text-gray-200 bg-slate-900 px-10 py-5 align-center rounded-xl">
+          <div className="bg-blue-100 dark:text-gray-200 dark:bg-slate-900 px-10 py-5 align-center rounded-xl">
             <p className="whitespace-pre-wrap">{apiOutput.trim()}</p>
           </div>
-          <p class="text-gray-400 text-sm italic self-start">
-            Not what you were expecting? Try again and change the wording a bit!{" "}
-            <br /> The same imput can lead to very different outputs.
-          </p>
-          <div className="self-end">
-            <Copy copyText={apiOutput.trim()} />
+          <div className="flex justify-between w-full">
+            <p class="text-gray-400 text-sm italic self-start">
+              Not what you were expecting? Try again and change the wording a
+              bit! <br /> The same imput can lead to very different outputs.
+            </p>
+            <div className="">
+              <Copy copyText={apiOutput.trim()} />
+            </div>
           </div>
         </div>
       )}

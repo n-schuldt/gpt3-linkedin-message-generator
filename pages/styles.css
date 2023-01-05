@@ -34,7 +34,7 @@ body {
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    /* gap: 64px; */
 }
 
 .header {    
@@ -317,7 +317,7 @@ textarea {
 
 @media (min-width: 810px) {
     .container {
-        max-width: 700px;
+        max-width: 975px;
         width: 100%;
     }
 

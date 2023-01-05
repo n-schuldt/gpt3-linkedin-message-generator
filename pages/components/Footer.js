@@ -27,7 +27,7 @@ function Footer() {
   };
 
   return (
-    <footer className="text-center bg-gray-900 text-gray-300 flex flex-col justify-center">
+    <footer className="text-center bg-[#315a94] text-white flex flex-col justify-center">
       <div className=" flex flex-col justify-center px-6 pt-6">
         <div className="flex justify-center mb-6">
           {/* <a
@@ -132,7 +132,7 @@ function Footer() {
                 text-base
                 font-normal
                 text-gray-400
-                bg-gray-700 bg-clip-padding
+                 bg-clip-padding
                 border border-solid border-gray-300
                 rounded
                 transition
@@ -154,7 +154,7 @@ function Footer() {
                 text-base
                 font-normal
                 text-gray-400
-                bg-gray-700 bg-clip-padding
+                bg-clip-padding
                 border border-solid border-gray-300
                 rounded
                 transition
@@ -296,7 +296,10 @@ function Footer() {
           </div>
         </div> */}
       </div>
-
+      <p className="text-gray-200 italic font-thin text-sm">
+        This tool is not affiliated with LinkedIn. All generated messages are
+        for demonstration purposes only.
+      </p>
       <div className="text-center p-4">
         2022 MIT License:
         <a className="text-white" href="https://tailwind-elements.com/">
